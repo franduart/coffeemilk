@@ -9,7 +9,7 @@ body{
     width: 100%;
     overflow-x: hidden;
     background-color: #201712;
-    position: relative;
+ 
 }
 .header{
     background-color: #652f17;
@@ -85,14 +85,17 @@ color: #fff;
 }
 #radio1:checked ~ .first{
     margin-left: 0%;
+    transition: 1s;
 }
 
 #radio2:checked ~ .first{
     margin-left: -800px;
     scroll-behavior: smooth;
+    transition: 1s;
 }
 #radio3:checked ~ .first{
     margin-left: -1600px;
+    transition: 1s;
 }
 
 .navigation-auto div{
@@ -117,6 +120,7 @@ color: #fff;
     margin: 0 auto;
     width: 100%;
     max-width: 800px;
+    position: relative;
    
    
     
@@ -176,6 +180,51 @@ color: #fff;
     color: #652f17;
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+#modal{
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+    font-size: 1.2rem;
+    color: #652f17;
+    border-radius: 10px;
+    box-shadow: 0  0 10px #000000ba;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FCE0AE;
+    width: 50%;
+    height: auto;
+    padding: 2rem;
+    left: 25%;
+  
+    
+   
+}
+#modal input{
+    border: 1px solid #652f17;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+.btn button{
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 10px #00000084;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#fechar{
+    background-color: red;
+    color: #fff;  
+}
+#finalizar{
+    background-color: green;
+    color: #fff;
 }
 
 /*Carrinho*/

@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     
-    <title>Document</title>
+    <title>CoffeMilk</title>
 </head>
 <body>
     <header class="header">
@@ -78,10 +78,10 @@
 
         </section>
       
-        <section class="menu-item">
+        <section class="menu-item" id="menu">
            
             <div class="itens">
-                <h4>Espresso</h4>
+                <h4 value="expresso">Espresso</h4>
                 <img src="assets/download (1).jpg" alt="">
                 <div>
                     <strong>R$8,00</strong><i class="fa-solid fa-cart-plus"></i>
@@ -132,23 +132,54 @@
                     <strong>R$8,00</strong><i class="fa-solid fa-cart-plus"></i>
                 </div>
             </div>
+
             <div class="itens">
-                <h4>Mocha ou Mocaccino</h4>
+                <h4>Mocha ou Mocaccino oi</h4>
                 <img src="assets/download.jpg" alt="">
-                <div>
+                
+                <button  class="add-to-card-btn" id="btnCart"
+                    data-name="Mocha ou Mocaccino "
+                    data-price="8.00">
                     <strong>R$8,00</strong><i class="fa-solid fa-cart-plus"></i>
-                </div>
+                     
+                </button>
             </div>
 
             <div class="itens">
                 <h4>Café Gelado</h4>
-                <img src="assets/download (1).jpg" alt="">
-                <div>
-                    <strong>R$8,00</strong><i class="fa-solid fa-cart-plus"></i>
+                <img src="assets/download.jpg" alt="">
+                
+                <button  
+                    class="add-to-card-btn" 
+                    id="btnCart"
+                    data-name="Café Gelado "
+                    data-price="10.00">
+                    <strong>R$10,00</strong><i class="fa-solid fa-cart-plus"></i>
+                     
+                </button>
+            </div>
+
+
+            <div id="modal">
+                <p>Meu Carrinho <i class="fa-solid fa-cart-plus"></i></p>
+                <h2 id="cartItens">Item</h2>
+                <h3>Total: <span id="total">0,00</span></h3>
+                <p>Endereço de entrega:</p>
+                <input type="text" placeholder="digite seu endereço" id="endereco">
+                <span id="enderecoVazio" style="color: red; font-size: 1rem; display: none;">Digite seu endereço</span>
+
+                <div class="btn">
+                <button id="fechar">Fechar</button>
+                <button id="finalizar">Finalizar Pedido</button>
                 </div>
             </div>
         </section>
-        <div class="cart"><button id="cart">Ver carrinho <i class="fa-solid fa-cart-plus"></i>(0)</button></div>
+        <div class="cart">
+            <button id="cart">Ver carrinho 
+                <i class="fa-solid fa-cart-plus"></i>
+                <span id="cartCounter">(0)</span>
+            </button>
+            </div>
     </main>
 
     <footer class="footer">
@@ -175,5 +206,7 @@
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
